@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book List</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1>Harry Hendry</h1>
+  <h2>Books I've read</h2>
+  <p>My summary and notes about each book. I break down each book and think about how we could apply what I have learned into the real world. The books are in no 
+    particular order. 
+  </p>
+  <div class="book-list">
+    <% books.forEach(book => { %>
+      <div class="book-item">
+        <a href="/books/<%= book.id %>">
+          <img src="<%= book.cover_url %>" alt="<%= book.title %>">
+          <h3><%= book.title %></h3>
+        </a>
+      </div>
+    <% }); %>
+  </div>
+</body>
+</html>
